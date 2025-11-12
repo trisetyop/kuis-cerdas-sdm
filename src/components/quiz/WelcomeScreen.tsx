@@ -23,15 +23,15 @@ export function WelcomeScreen() {
               <BookOpenCheck className="w-12 h-12 text-orange-500" />
             </motion.div>
           <CardTitle className="text-4xl font-bold mt-6 text-slate-900 dark:text-slate-50">
-            Selamat Datang di Kuis Manajemen Sumber Daya Manusia
+            Selamat Datang di Kuis Cerdas SDM
           </CardTitle>
           <CardDescription className="text-lg text-slate-600 dark:text-slate-300 mt-2 max-w-md mx-auto">
-            Uji pengetahuan Anda tentang Manajemen Sumber Daya Manusia melalui 54 pertanyaan komprehensif.
+            Uji pengetahuan Anda tentang Manajemen Sumber Daya Manusia melalui 45 pertanyaan komprehensif.
           </CardDescription>
         </CardHeader>
         <CardContent className="p-8">
           <p className="text-slate-700 dark:text-slate-300 text-base">
-            Anda akan dihadapkan pada serangkaian pertanyaan pilihan ganda yang mencakup 9 area kompetensi utama dalam Manajemen Sumber Daya Manusia. Jawab setiap pertanyaan dengan teliti.
+            Anda akan dihadapkan pada serangkaian pertanyaan pilihan ganda yang mencakup 9 area kompetensi utama dalam MSDM. Jawab setiap pertanyaan dengan teliti.
           </p>
           <p className="font-semibold text-orange-600 dark:text-orange-400 mt-4">
             Siap untuk memulai tantangan?

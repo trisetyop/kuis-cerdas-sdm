@@ -1,5 +1,5 @@
 import { useQuizStore } from '@/hooks/use-quiz-store';
-import { CategorySelectionScreen } from '@/components/quiz/CategorySelectionScreen';
+import { WelcomeScreen } from '@/components/quiz/WelcomeScreen';
 import { QuizScreen } from '@/components/quiz/QuizScreen';
 import { ResultsScreen } from '@/components/quiz/ResultsScreen';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -12,9 +12,9 @@ export function HomePage() {
         return <QuizScreen />;
       case 'finished':
         return <ResultsScreen />;
-      case 'selecting_category':
+      case 'welcome':
       default:
-        return <CategorySelectionScreen />;
+        return <WelcomeScreen />;
     }
   };
   return (

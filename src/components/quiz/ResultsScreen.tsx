@@ -10,7 +10,7 @@ export function ResultsScreen() {
   const score = useQuizStore((state) => state.score);
   const questions = useQuizStore((state) => state.questions);
   const restart = useQuizStore((state) => state.restart);
-  const retakeQuiz = useQuizStore((state) => state.retakeQuiz);
+  const startQuiz = useQuizStore((state) => state.startQuiz);
   const { width, height } = useWindowSize();
   const [showConfetti, setShowConfetti] = useState(false);
   const percentage = Math.round((score / questions.length) * 100);
@@ -65,7 +65,7 @@ export function ResultsScreen() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row gap-4 pt-6">
-            <Button onClick={retakeQuiz} className="w-full sm:w-auto flex-1 bg-orange-500 hover:bg-orange-600 text-white font-bold transition-colors">
+            <Button onClick={startQuiz} className="w-full sm:w-auto flex-1 bg-orange-500 hover:bg-orange-600 text-white font-bold transition-colors">
               <Repeat className="mr-2 h-4 w-4" /> Ulangi Kuis
             </Button>
             <Button onClick={restart} variant="outline" className="w-full sm:w-auto flex-1">

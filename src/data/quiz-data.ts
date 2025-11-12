@@ -454,3 +454,4 @@ export const quizData: QuizCategory[] = [
     ],
   },
 ];
+export const allQuestions: Question[] = quizData.flatMap(category => category.questions);
