@@ -22,8 +22,8 @@ export function ResultsScreen() {
     }
   }, [percentage]);
   const getFeedback = () => {
-    if (percentage === 100) return { title: "Luar Biasa!", message: "Anda adalah seorang ahli MSDM sejati!", color: "text-green-500" };
-    if (percentage >= 75) return { title: "Sangat Baik!", message: "Pengetahuan Anda tentang MSDM sangat kuat.", color: "text-blue-500" };
+    if (percentage === 100) return { title: "Luar Biasa!", message: "Anda adalah seorang ahli Manajemen Sumber Daya Manusia sejati!", color: "text-green-500" };
+    if (percentage >= 75) return { title: "Sangat Baik!", message: "Pengetahuan Anda tentang Manajemen Sumber Daya Manusia sangat kuat.", color: "text-blue-500" };
     if (percentage >= 50) return { title: "Cukup Baik!", message: "Anda memiliki dasar yang baik. Teruslah belajar!", color: "text-yellow-500" };
     return { title: "Perlu Belajar Lagi", message: "Jangan menyerah, coba lagi untuk meningkatkan skor Anda.", color: "text-red-500" };
   };

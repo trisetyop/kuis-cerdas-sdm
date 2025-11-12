@@ -31,7 +31,7 @@ export function WelcomeScreen() {
         </CardHeader>
         <CardContent className="p-8">
           <p className="text-slate-700 dark:text-slate-300 text-base">
-            Anda akan dihadapkan pada serangkaian pertanyaan pilihan ganda yang mencakup 9 area kompetensi utama dalam MSDM. Jawab setiap pertanyaan dengan teliti.
+            Anda akan dihadapkan pada serangkaian pertanyaan pilihan ganda yang mencakup 9 area kompetensi utama dalam Manajemen Sumber Daya Manusia. Jawab setiap pertanyaan dengan teliti.
           </p>
           <p className="font-semibold text-orange-600 dark:text-orange-400 mt-4">
             Siap untuk memulai tantangan?
