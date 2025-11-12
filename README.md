@@ -1,6 +1,6 @@
 # Kuis Cerdas SDM
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/trisetyop/kuis-cerdas-sdm)
 
 An interactive and visually engaging quiz application to test knowledge in Human Resource Management based on EKMA4214 competency standards.
 
@@ -94,4 +94,4 @@ Wrangler will build and deploy your application. After deployment, you will rece
 
 You can also deploy this project directly to your Cloudflare account by clicking the button below.
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/trisetyop/kuis-cerdas-sdm)
