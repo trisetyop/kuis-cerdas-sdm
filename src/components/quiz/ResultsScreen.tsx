@@ -10,7 +10,7 @@ export function ResultsScreen() {
   const score = useQuizStore((state) => state.score);
   const questions = useQuizStore((state) => state.questions);
   const restart = useQuizStore((state) => state.restart);
-  const startQuiz = useQuizStore((state) => state.startQuiz);
+  const retakeQuiz = useQuizStore((state) => state.retakeQuiz);
   const { width, height } = useWindowSize();
   const [showConfetti, setShowConfetti] = useState(false);
   const percentage = Math.round((score / questions.length) * 100);
@@ -22,8 +22,8 @@ export function ResultsScreen() {
     }
   }, [percentage]);
   const getFeedback = () => {
-    if (percentage === 100) return { title: "Luar Biasa!", message: "Anda adalah seorang ahli Manajemen Sumber Daya Manusia sejati!", color: "text-green-500" };
-    if (percentage >= 75) return { title: "Sangat Baik!", message: "Pengetahuan Anda tentang Manajemen Sumber Daya Manusia sangat kuat.", color: "text-blue-500" };
+    if (percentage === 100) return { title: "Luar Biasa!", message: "Anda adalah seorang ahli MSDM sejati!", color: "text-green-500" };
+    if (percentage >= 75) return { title: "Sangat Baik!", message: "Pengetahuan Anda tentang MSDM sangat kuat.", color: "text-blue-500" };
     if (percentage >= 50) return { title: "Cukup Baik!", message: "Anda memiliki dasar yang baik. Teruslah belajar!", color: "text-yellow-500" };
     return { title: "Perlu Belajar Lagi", message: "Jangan menyerah, coba lagi untuk meningkatkan skor Anda.", color: "text-red-500" };
   };
@@ -65,7 +65,7 @@ export function ResultsScreen() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row gap-4 pt-6">
-            <Button onClick={startQuiz} className="w-full sm:w-auto flex-1 bg-orange-500 hover:bg-orange-600 text-white font-bold transition-colors">
+            <Button onClick={retakeQuiz} className="w-full sm:w-auto flex-1 bg-orange-500 hover:bg-orange-600 text-white font-bold transition-colors">
               <Repeat className="mr-2 h-4 w-4" /> Ulangi Kuis
             </Button>
             <Button onClick={restart} variant="outline" className="w-full sm:w-auto flex-1">

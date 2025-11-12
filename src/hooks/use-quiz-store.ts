@@ -1,36 +1,39 @@
 import { create } from 'zustand';
-import { allQuestions, Question } from '@/data/quiz-data';
-type GameStatus = 'welcome' | 'in_progress' | 'finished';
+import { quizData, Question, QuizCategory } from '@/data/quiz-data';
+type GameStatus = 'selecting_category' | 'in_progress' | 'finished';
 interface QuizState {
   gameStatus: GameStatus;
   questions: Question[];
   currentQuestionIndex: number;
   userAnswers: (number | null)[];
+  selectedCategory: QuizCategory | null;
   score: number;
 }
 interface QuizActions {
-  startQuiz: () => void;
+  selectCategory: (category: QuizCategory) => void;
   answerQuestion: (answerIndex: number) => void;
   nextQuestion: () => void;
   restart: () => void;
+  retakeQuiz: () => void;
 }
 const initialState: QuizState = {
-  gameStatus: 'welcome',
+  gameStatus: 'selecting_category',
   questions: [],
   currentQuestionIndex: 0,
   userAnswers: [],
+  selectedCategory: null,
   score: 0,
 };
 export const useQuizStore = create<QuizState & QuizActions>((set, get) => ({
   ...initialState,
-  startQuiz: () => {
-    // Optional: shuffle questions for variety each time
-    const shuffledQuestions = [...allQuestions].sort(() => Math.random() - 0.5);
+  selectCategory: (category) => {
+    const questions = category.questions;
     set({
-      questions: shuffledQuestions,
+      selectedCategory: category,
+      questions,
       gameStatus: 'in_progress',
       currentQuestionIndex: 0,
-      userAnswers: Array(shuffledQuestions.length).fill(null),
+      userAnswers: Array(questions.length).fill(null),
       score: 0,
     });
   },
@@ -56,5 +59,13 @@ export const useQuizStore = create<QuizState & QuizActions>((set, get) => ({
   },
   restart: () => {
     set(initialState);
+  },
+  retakeQuiz: () => {
+    const { selectedCategory } = get();
+    if (selectedCategory) {
+      get().selectCategory(selectedCategory);
+    } else {
+      set(initialState);
+    }
   },
 }));
