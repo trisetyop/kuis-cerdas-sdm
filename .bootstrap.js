@@ -78,7 +78,8 @@ function updateWranglerJsonc() {
 
 function runSetupCommands() {
     const commands = [
-    "bun add react-confetti@^6.1.0"
+    "bun add react-confetti@^6.1.0",
+    "bun install react-confetti"
 ];
     
     if (commands.length === 0) {
