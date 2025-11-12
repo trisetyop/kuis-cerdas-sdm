@@ -23,7 +23,7 @@ export function WelcomeScreen() {
               <BookOpenCheck className="w-12 h-12 text-orange-500" />
             </motion.div>
           <CardTitle className="text-4xl font-bold mt-6 text-slate-900 dark:text-slate-50">
-            Selamat Datang di Kuis Cerdas SDM
+            Selamat Datang di Kuis Manajemen Sumber Daya Manusia
           </CardTitle>
           <CardDescription className="text-lg text-slate-600 dark:text-slate-300 mt-2 max-w-md mx-auto">
             Uji pengetahuan Anda tentang Manajemen Sumber Daya Manusia melalui 45 pertanyaan komprehensif.
