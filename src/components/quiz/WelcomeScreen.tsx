@@ -26,7 +26,7 @@ export function WelcomeScreen() {
             Selamat Datang di Kuis Manajemen Sumber Daya Manusia
           </CardTitle>
           <CardDescription className="text-lg text-slate-600 dark:text-slate-300 mt-2 max-w-md mx-auto">
-            Uji pengetahuan Anda tentang Manajemen Sumber Daya Manusia melalui 45 pertanyaan komprehensif.
+            Uji pengetahuan Anda tentang Manajemen Sumber Daya Manusia melalui 54 pertanyaan komprehensif.
           </CardDescription>
         </CardHeader>
         <CardContent className="p-8">
